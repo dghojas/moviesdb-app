@@ -2,7 +2,7 @@
 
 -   JavaScript 📐
 -   React ⚛️
--   Hooks ⚓cle
+-   Hooks ⚓
 -   Material UI 🔳
 -   The Movies DB 📕
 -   Netlify 🚀
