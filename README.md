@@ -6,7 +6,7 @@ A robustly featured and continuously developed React application, utilizing The 
 -   React ⚛️
 -   Hooks ⚓
 -   Material UI 🔳
--   The Movies DB 📕
+-   The Movies DB 🎥
 -   Netlify 🚀
 
 ## Created by Daniel Godoy Hojas for Escalab®
