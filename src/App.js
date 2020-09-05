@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './assets/css/styles.scss';
+
+import MoviesContextProvider from './contexts/moviesContext';
+import Header from './components/common/header/header.component';
+import Footer from './components/common/footer/footer.component';
+
+import Main from './components/common/main/main.component';
+
+const App = () => {
+    return (
+        <div className="App">
+            <Fragment>
+                <Header />
+                <MoviesContextProvider>
+                    <Main />
+                </MoviesContextProvider>
+                <Footer />
+            </Fragment>
+        </div>
+    );
 }
 
 export default App;

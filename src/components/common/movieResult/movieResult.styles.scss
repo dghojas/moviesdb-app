@@ -1,0 +1,95 @@
+.App {
+    .flex__wrapMovielist {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: inherit;
+        margin-right: -30px;
+        .movie__item {
+            justify-content: flex-start;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: inherit;
+            width: 20%;
+            position: relative;
+            padding: 12px;
+            > img {
+                border: 0;
+                width: 100%;
+                height: auto;
+                vertical-align: middle;
+                border-radius: 5px;
+                margin-right: 0;
+                margin-bottom: 15px;
+                transition: all 0.5s ease-out;
+            }
+            .hvr__inner {
+                position: absolute;
+                width: 100px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -120%);
+                background-color: #dd003f;
+                padding: 8px 0;
+                text-align: center;
+                border-radius: 30px;
+                cursor: pointer;
+                opacity: 0;
+                transition: all 0.5s ease-out;
+                font-family: 'Dosis', sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #ffffff;
+                &:hover {
+                    background-color: #f5b50a;
+                }
+            }
+            .mv__item__infor {
+                h6 {
+                    font-size: 16px;
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                    > a {
+                        font-family: 'Dosis', sans-serif;
+                        font-size: 14px;
+                        color: #ffffff;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                }
+                .rate {
+                    font-size: 12px;
+                    margin-bottom: 0;
+                    display: flex;
+                    align-items: center;
+                    > .icons__star {
+                        color: #f5b50a;
+                        font-size: 22px;
+                        margin-right: 5px;
+                    }
+                    > span {
+                        color: #ffffff;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            &:hover {
+                img {
+                    opacity: 0.5;
+                }
+                .hvr__inner {
+                    opacity: 1;
+                }
+                .mv__item__infor h6 > a {
+                    color: #dcf836;
+                }
+            }
+        }
+    }
+}
