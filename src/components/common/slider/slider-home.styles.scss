@@ -11,8 +11,8 @@
         align-items: center;
         justify-content: center;
         background-position: center;
-        background: url(../../../assets/img/header_bg.jpg) no-repeat center
-            center;
+        background: url(../../../assets/img/header_bg.jpg) no-repeat;
+        background-size: cover;
         overflow: hidden;
         .slick-home {
             width: 90%;
@@ -178,6 +178,9 @@
     }
 }
 @media (max-width: 767px) {
+    .App .slider .slick-home {
+        padding: 0 10px;
+    }
     .App .slider .slick-home .slider__box .slider__img {
         width: auto;
         margin: 0 auto;

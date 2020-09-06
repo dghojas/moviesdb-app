@@ -40,8 +40,10 @@ const multiItem = {
         {
             breakpoint: 480,
             settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                slidesToShow: 2,
+                slidesToScroll: 2,
             },
         },
     ],

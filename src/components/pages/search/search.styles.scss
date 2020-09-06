@@ -12,6 +12,13 @@
             height: 385px;
             background: url(../../../assets/img/hero-bg.jpg) no-repeat;
         }
+        &.removeBefore {
+            &:before {
+                content: '';
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
         h1 {
             font-family: 'Dosis', sans-serif;
             font-size: 36px;

@@ -41,7 +41,7 @@
         }
         .movie-item {
             position: relative;
-            margin-right: 30px;
+            padding: 10px;
             border-radius: 5px;
             cursor: pointer;
             .mv-img {
@@ -141,10 +141,10 @@
             }
         }
         .slick-dots {
-            margin-left: 50%;
             text-align: right;
-            right: 15px;
-            width: 50%;
+            margin-left: auto;
+            right: 10px;
+            width: 100%;
             position: inherit;
             margin-bottom: 40px;
             margin-top: -55px;
@@ -196,6 +196,6 @@
 
 @media (max-width: 767px) {
     .App .movie-items {
-        padding: 70px 30px;
+        padding: 70px 10px;
     }
 }

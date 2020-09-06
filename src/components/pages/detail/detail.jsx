@@ -60,8 +60,6 @@ const Detail = () => {
         ? moment(results.release_date, 'YYYY-MM-DD')
         : null;
 
-    console.log(results);
-
     return (
         <Fragment>
             {isLoading ? (

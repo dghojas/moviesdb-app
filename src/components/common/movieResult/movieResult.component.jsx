@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Link as LinkRouter } from 'react-router-dom';
 
 import './movieResult.styles.scss';
 
@@ -24,9 +25,12 @@ const MovieResult = ({ getData }) => {
                                 }
                                 alt={data.title}
                             />
-                            <Link href="#" className="hvr__inner">
+                            <LinkRouter
+                                to={`/detail/movie/${data.id}`}
+                                className="hvr__inner"
+                            >
                                 Read more
-                            </Link>
+                            </LinkRouter>
                             <div className="mv__item__infor">
                                 <h6>
                                     <Link href="#">{data.title}</Link>

@@ -79,3 +79,13 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .App .hero.sr-single {
+        height: 380px;
+        h1 {
+            font-size: 22px;
+            padding: 0 15px;
+        }
+    }
+}

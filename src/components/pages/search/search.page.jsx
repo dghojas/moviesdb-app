@@ -15,7 +15,7 @@ const MovieDiscoverPage = () => {
 
     return (
         <Fragment>
-            <div className="hero page__hero">
+            <div className="hero page__hero removeBefore">
                 <Container maxWidth="lg">
                     <div className="hero-ct">
                         <h1>Search</h1>

@@ -44,6 +44,7 @@
                 font-weight: bold;
                 text-transform: uppercase;
                 color: #ffffff;
+                text-decoration: none;
                 &:hover {
                     background-color: #f5b50a;
                 }
@@ -91,5 +92,21 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 990px) {
+    .App .flex__wrapMovielist .movie__item {
+        width: 33.333%;
+    }
+}
+@media (max-width: 767px) {
+    .App .flex__wrapMovielist .movie__item {
+        width: 50%;
+    }
+}
+@media (max-width: 480px) {
+    .App .flex__wrapMovielist .movie__item {
+        width: 50%;
     }
 }
