@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link as LinkRouter } from 'react-router-dom';
 
 import './movies.styles.scss';
 
@@ -73,9 +74,12 @@ const MoviesDiscover = () => {
                                         />
                                     </div>
                                     <div className="hvr-inner">
-                                        <Link href="#" data-id={arrMovie.id}>
-                                            Read more
-                                        </Link>
+                                        <LinkRouter
+                                            to={`/detail/tv/${arrMovie.id}`}
+                                            className="btn__more"
+                                        >
+                                            more detail
+                                        </LinkRouter>
                                     </div>
                                     <div className="title-in">
                                         <h6>

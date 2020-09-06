@@ -1,4 +1,6 @@
 import React, { Fragment, useContext } from 'react';
+import { Link as LinkRouter } from 'react-router-dom';
+
 import './slider-home.styles.scss';
 
 import 'slick-carousel/slick/slick.scss';
@@ -9,7 +11,6 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import StarRateIcon from '@material-ui/icons/StarRate';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
@@ -76,15 +77,9 @@ const SliderHome = () => {
                                                                 {arrMovie.title}
                                                             </Link>
                                                         </h1>
-                                                        <div className="social-btn">
-                                                            <Link
-                                                                href="#"
-                                                                className="parent-btn"
-                                                            >
-                                                                <PlayArrowIcon className="icons" />
-                                                                Watch Trailer
-                                                            </Link>
-                                                        </div>
+                                                        <p className="overview">
+                                                            {arrMovie.overview}
+                                                        </p>
                                                         <div className="mv-details">
                                                             <div className="star">
                                                                 <StarRateIcon className="icons__star" />
@@ -104,12 +99,12 @@ const SliderHome = () => {
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <Link
-                                                            href="#"
+                                                        <LinkRouter
+                                                            to={`/detail/movie/${arrMovie.id}`}
                                                             className="btn__more"
                                                         >
                                                             more detail
-                                                        </Link>
+                                                        </LinkRouter>
                                                     </div>
                                                 </Paper>
                                             </Grid>

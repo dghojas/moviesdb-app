@@ -27,5 +27,5 @@ export const DiscoverTvGet = () =>
 export const SearchGet = (q_search, type) =>
     `${base_url}${getSearch}${type}${api_key}${language}${searchQuery}${q_search}&page=1&include_adult=false`;
 
-export const SingleGet = (movie_id) =>
-    `${base_url}${getMovie}/${movie_id}${api_key}${language}`;
+export const SingleGet = (tipMovie, movie_id) =>
+    `${base_url}/${tipMovie}/${movie_id}${api_key}${language}`;

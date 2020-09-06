@@ -4,25 +4,24 @@ import {
     DiscoverMovieGet,
     DiscoverTvGet,
     SearchGet,
-    SingleGet,
 } from './../constants/constants';
 
 export const MoviesContext = createContext();
 
 const MoviesContextProvider = ({ children }) => {
-    const movie_id = window.location.pathname.split('/')[2];
+    // const movie_id = window.location.pathname.split('/')[2];
     const [moviePopular, setMoviePopular] = useState([]);
     const [movieDiscover, setMovieDiscover] = useState([]);
     const [tvDiscover, setTvDiscover] = useState([]);
     const [searchTrem, setSearchTrem] = useState('');
-    const [singleMovie, setSingleMovie] = useState([]);
+    // const [singleMovie, setSingleMovie] = useState([]);
 
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => popularMovie(), []);
     useEffect(() => discoverMovie(), []);
     useEffect(() => discoverTv(), []);
-    useEffect(() => singleMovieGet(), [movie_id]);
+    // useEffect(() => singleMovieGet(), [movie_id]);
 
     const popularMovie = () => {
         setIsLoading(true);
@@ -57,17 +56,17 @@ const MoviesContextProvider = ({ children }) => {
             .catch((err) => console.log(err));
     };
 
-    const singleMovieGet = (movie_id) => {
-        if (movie_id) {
-            fetch(SingleGet(movie_id))
-                .then((response) => response.json())
-                .then((data) => {
-                    console.log(data);
-                    setSingleMovie(data.json());
-                })
-                .catch((err) => console.log(err));
-        }
-    };
+    // const singleMovieGet = (movie_id) => {
+    //     if (movie_id) {
+    //         fetch(SingleGet(movie_id))
+    //             .then((response) => response.json())
+    //             .then((data) => {
+    //                 console.log(data);
+    //                 setSingleMovie(data.json());
+    //             })
+    //             .catch((err) => console.log(err));
+    //     }
+    // };
 
     const searchInput = async (q, t, s) => {
         let url;
@@ -108,8 +107,6 @@ const MoviesContextProvider = ({ children }) => {
                 tvDiscover,
                 searchInput,
                 searchTrem,
-                singleMovieGet,
-                singleMovie,
             }}
         >
             {children}
